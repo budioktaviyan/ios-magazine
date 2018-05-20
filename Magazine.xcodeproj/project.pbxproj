@@ -12,8 +12,6 @@
 		1F4E394420B1C2CF008DF4BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F4E394220B1C2CF008DF4BB /* Main.storyboard */; };
 		1F4E394620B1C2D1008DF4BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F4E394520B1C2D1008DF4BB /* Assets.xcassets */; };
 		1F4E394920B1C2D1008DF4BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F4E394720B1C2D1008DF4BB /* LaunchScreen.storyboard */; };
-		1F4E395020B1C741008DF4BB /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1F4E394A20B1C2D1008DF4BB /* Info.plist */; };
-		1F4E395120B1C7B2008DF4BB /* Magazine.app in Resources */ = {isa = PBXBuildFile; fileRef = 1F4E393B20B1C2CF008DF4BB /* Magazine.app */; };
 		1F59138920B1CAF00062D1B6 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F59138820B1CAF00062D1B6 /* CoreText.framework */; };
 		1F59138B20B1CB350062D1B6 /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F59138A20B1CB350062D1B6 /* TextView.swift */; };
 /* End PBXBuildFile section */
@@ -141,8 +139,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1F4E395120B1C7B2008DF4BB /* Magazine.app in Resources */,
-				1F4E395020B1C741008DF4BB /* Info.plist in Resources */,
 				1F4E394920B1C2D1008DF4BB /* LaunchScreen.storyboard in Resources */,
 				1F4E394620B1C2D1008DF4BB /* Assets.xcassets in Resources */,
 				1F4E394420B1C2CF008DF4BB /* Main.storyboard in Resources */,
@@ -305,8 +301,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VB5GY8X6B2;
 				INFOPLIST_FILE = Magazine/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -325,8 +321,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VB5GY8X6B2;
 				INFOPLIST_FILE = Magazine/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
