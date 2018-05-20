@@ -2,6 +2,8 @@ import UIKit
 import CoreText
 
 class TextView: UIView {
+    
+    var attrString: NSAttributedString!
 
     override func draw(_ rect: CGRect) {
         // Drawing code
@@ -13,9 +15,13 @@ class TextView: UIView {
         let path = CGMutablePath()
         path.addRect(bounds)
 
-        let attrString = NSAttributedString(string: "Hello World")
-        let framesetter = CTFramesetterCreateWithAttributedString(attrString as CFAttributedString)
-        let frame = CTFramesetterCreateFrame(framesetter, CFRangeMake(0, attrString.length), path, nil)
+        let framesetter = CTFramesetterCreateWithAttributedString(self.attrString as CFAttributedString)
+        let frame = CTFramesetterCreateFrame(framesetter, CFRangeMake(0, self.attrString.length), path, nil)
         CTFrameDraw(frame, context)
+    }
+    
+    // Internal
+    func importAttrString(_ attrString: NSAttributedString) {
+        self.attrString = attrString
     }
 }
