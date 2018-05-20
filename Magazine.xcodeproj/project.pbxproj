@@ -14,6 +14,8 @@
 		1F4E394920B1C2D1008DF4BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F4E394720B1C2D1008DF4BB /* LaunchScreen.storyboard */; };
 		1F4E395020B1C741008DF4BB /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1F4E394A20B1C2D1008DF4BB /* Info.plist */; };
 		1F4E395120B1C7B2008DF4BB /* Magazine.app in Resources */ = {isa = PBXBuildFile; fileRef = 1F4E393B20B1C2CF008DF4BB /* Magazine.app */; };
+		1F59138920B1CAF00062D1B6 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F59138820B1CAF00062D1B6 /* CoreText.framework */; };
+		1F59138B20B1CB350062D1B6 /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F59138A20B1CB350062D1B6 /* TextView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		1F4E394A20B1C2D1008DF4BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1F4E395320B1C7BE008DF4BB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		1F4E395520B1C7D8008DF4BB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		1F59138820B1CAF00062D1B6 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		1F59138A20B1CB350062D1B6 /* TextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F59138920B1CAF00062D1B6 /* CoreText.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +49,7 @@
 			children = (
 				1F4E393D20B1C2CF008DF4BB /* Magazine */,
 				1F4E393C20B1C2CF008DF4BB /* Products */,
+				1F59138720B1CAF00062D1B6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,8 +70,17 @@
 				1F4E394520B1C2D1008DF4BB /* Assets.xcassets */,
 				1F4E394720B1C2D1008DF4BB /* LaunchScreen.storyboard */,
 				1F4E394A20B1C2D1008DF4BB /* Info.plist */,
+				1F59138A20B1CB350062D1B6 /* TextView.swift */,
 			);
 			path = Magazine;
+			sourceTree = "<group>";
+		};
+		1F59138720B1CAF00062D1B6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1F59138820B1CAF00062D1B6 /* CoreText.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,6 +156,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F59138B20B1CB350062D1B6 /* TextView.swift in Sources */,
 				1F4E394120B1C2CF008DF4BB /* ViewController.swift in Sources */,
 				1F4E393F20B1C2CF008DF4BB /* AppDelegate.swift in Sources */,
 			);
