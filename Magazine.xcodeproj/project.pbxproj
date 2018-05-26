@@ -19,6 +19,8 @@
 		1F59139C20B1E4C20062D1B6 /* zombie3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1F59139820B1E4C20062D1B6 /* zombie3.jpg */; };
 		1F59139D20B1E4C20062D1B6 /* zombies.txt in Resources */ = {isa = PBXBuildFile; fileRef = 1F59139920B1E4C20062D1B6 /* zombies.txt */; };
 		1F59139F20B1E4FF0062D1B6 /* MarkupParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F59139E20B1E4FF0062D1B6 /* MarkupParser.swift */; };
+		1F5913A120B969920062D1B6 /* ColumnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5913A020B969920062D1B6 /* ColumnView.swift */; };
+		1F5913A320B96B4F0062D1B6 /* TextSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5913A220B96B4F0062D1B6 /* TextSettings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		1F59139820B1E4C20062D1B6 /* zombie3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = zombie3.jpg; sourceTree = "<group>"; };
 		1F59139920B1E4C20062D1B6 /* zombies.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = zombies.txt; sourceTree = "<group>"; };
 		1F59139E20B1E4FF0062D1B6 /* MarkupParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkupParser.swift; sourceTree = "<group>"; };
+		1F5913A020B969920062D1B6 /* ColumnView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColumnView.swift; sourceTree = "<group>"; };
+		1F5913A220B96B4F0062D1B6 /* TextSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextSettings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +85,8 @@
 				1F4E394720B1C2D1008DF4BB /* LaunchScreen.storyboard */,
 				1F4E394A20B1C2D1008DF4BB /* Info.plist */,
 				1F59138A20B1CB350062D1B6 /* TextView.swift */,
+				1F5913A020B969920062D1B6 /* ColumnView.swift */,
+				1F5913A220B96B4F0062D1B6 /* TextSettings.swift */,
 			);
 			path = Magazine;
 			sourceTree = "<group>";
@@ -180,6 +186,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F59138B20B1CB350062D1B6 /* TextView.swift in Sources */,
+				1F5913A320B96B4F0062D1B6 /* TextSettings.swift in Sources */,
+				1F5913A120B969920062D1B6 /* ColumnView.swift in Sources */,
 				1F4E394120B1C2CF008DF4BB /* ViewController.swift in Sources */,
 				1F59139F20B1E4FF0062D1B6 /* MarkupParser.swift in Sources */,
 				1F4E393F20B1C2CF008DF4BB /* AppDelegate.swift in Sources */,

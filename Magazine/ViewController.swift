@@ -12,7 +12,7 @@ class ViewController: UIViewController {
             let parser = MarkupParser()
             parser.parseMarkup(text)
 
-            (view as? TextView)?.importAttrString(parser.attrString)
+            (view as? TextView)?.buildFrames(withAttrString: parser.attrString, andImages: parser.images)
         } catch _ {
         }
     }
