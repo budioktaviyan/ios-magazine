@@ -3,6 +3,7 @@ import UIKit
 class ColumnView: UIView {
     
     var ctFrame: CTFrame!
+    var images: [(image: UIImage, frame: CGRect)] = []
     
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)!
@@ -22,5 +23,12 @@ class ColumnView: UIView {
         context.scaleBy(x: 1.0, y: -1.0)
         
         CTFrameDraw(ctFrame, context)
+        
+        for imageData in images {
+            if let image = imageData.image.cgImage {
+                let imgBounds = imageData.frame
+                context.draw(image, in: imgBounds)
+            }
+        }
     }
 }

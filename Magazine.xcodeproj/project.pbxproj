@@ -60,9 +60,9 @@
 			isa = PBXGroup;
 			children = (
 				1F4E393D20B1C2CF008DF4BB /* Magazine */,
+				1F59139520B1E4C20062D1B6 /* Materials */,
 				1F4E393C20B1C2CF008DF4BB /* Products */,
 				1F59138720B1CAF00062D1B6 /* Frameworks */,
-				1F59139520B1E4C20062D1B6 /* Materials */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,16 +77,16 @@
 		1F4E393D20B1C2CF008DF4BB /* Magazine */ = {
 			isa = PBXGroup;
 			children = (
-				1F59139E20B1E4FF0062D1B6 /* MarkupParser.swift */,
 				1F4E393E20B1C2CF008DF4BB /* AppDelegate.swift */,
 				1F4E394020B1C2CF008DF4BB /* ViewController.swift */,
+				1F4E394720B1C2D1008DF4BB /* LaunchScreen.storyboard */,
 				1F4E394220B1C2CF008DF4BB /* Main.storyboard */,
 				1F4E394520B1C2D1008DF4BB /* Assets.xcassets */,
-				1F4E394720B1C2D1008DF4BB /* LaunchScreen.storyboard */,
 				1F4E394A20B1C2D1008DF4BB /* Info.plist */,
-				1F59138A20B1CB350062D1B6 /* TextView.swift */,
 				1F5913A020B969920062D1B6 /* ColumnView.swift */,
+				1F59139E20B1E4FF0062D1B6 /* MarkupParser.swift */,
 				1F5913A220B96B4F0062D1B6 /* TextSettings.swift */,
+				1F59138A20B1CB350062D1B6 /* TextView.swift */,
 			);
 			path = Magazine;
 			sourceTree = "<group>";

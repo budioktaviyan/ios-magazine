@@ -79,6 +79,62 @@ class MarkupParser: NSObject {
                                                     fontName = String(tag[range])
                                                 }
                     }
+                } else if tag.hasPrefix("img") {
+                    var filename:String = ""
+                    let imageRegex = try NSRegularExpression(pattern: "(?<=src=\")[^\"]+",
+                                                             options: NSRegularExpression.Options(rawValue: 0))
+                    imageRegex.enumerateMatches(in: tag, 
+                                                options: NSRegularExpression.MatchingOptions(rawValue: 0), 
+                                                range: NSMakeRange(0, tag.count)) { (match, _, _) in
+                                                    
+                                                    if let match = match,
+                                                        let range = tag.range(from: match.range) {
+                                                        filename = String(tag[range])
+                                                    }
+                    }
+
+                    let settings = TextSettings()
+                    var width: CGFloat = settings.columnRect.width
+                    var height: CGFloat = 0
+                    
+                    if let image = UIImage(named: filename) {
+                        height = width * (image.size.height / image.size.width)
+                        
+                        if height > settings.columnRect.height - font.lineHeight {
+                            height = settings.columnRect.height - font.lineHeight
+                            width = height * (image.size.width / image.size.height)
+                        }
+                    }
+                    
+                    images += [["width": NSNumber(value: Float(width)),
+                                "height": NSNumber(value: Float(height)),
+                                "filename": filename,
+                                "location": NSNumber(value: attrString.length)]]
+                    
+                    struct RunStruct {
+                        let ascent: CGFloat
+                        let descent: CGFloat
+                        let width: CGFloat
+                    }
+                    
+                    let extentBuffer = UnsafeMutablePointer<RunStruct>.allocate(capacity: 1)
+                    extentBuffer.initialize(to: RunStruct(ascent: height, descent: 0, width: width))
+                    
+                    var callbacks = CTRunDelegateCallbacks(version: kCTRunDelegateVersion1, dealloc: { (pointer) in
+                    }, getAscent: { (pointer) -> CGFloat in
+                        let d = pointer.assumingMemoryBound(to: RunStruct.self)
+                        return d.pointee.ascent
+                    }, getDescent: { (pointer) -> CGFloat in
+                        let d = pointer.assumingMemoryBound(to: RunStruct.self)
+                        return d.pointee.descent
+                    }, getWidth: { (pointer) -> CGFloat in
+                        let d = pointer.assumingMemoryBound(to: RunStruct.self)
+                        return d.pointee.width
+                    })
+                    
+                    let delegate = CTRunDelegateCreate(&callbacks, extentBuffer)
+                    let attrDictionaryDelegate = [(kCTRunDelegateAttributeName as NSAttributedStringKey): (delegate as Any)]              
+                    attrString.append(NSAttributedString(string: " ", attributes: attrDictionaryDelegate))
                 }
             }
         } catch _ {
